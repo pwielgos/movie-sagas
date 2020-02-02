@@ -14,7 +14,7 @@ class Home extends Component {
     render() {
         return (
             <div className="App">
-                {this.props.reduxState.movies.map((movie, i) => {
+                {this.props.reduxState.moviesReducer.map((movie, i) => {
                     return <ul>
                         <img src={movie.poster} onClick={() => this.handleClick(movie)} />
                         <h1>{movie.title}</h1>
