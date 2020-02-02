@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { HashRouter as Router, Route } from 'react-router-dom'
 import './App.css';
-import Details from '../Details/Details'
-import Home from '../Home/Home'
+import Details from '../Details/Details';
+import Home from '../Home/Home';
+import Edit from '../Edit/Edit';
 
 class App extends Component {
   // Renders the entire app on the DOM
@@ -13,6 +14,7 @@ class App extends Component {
         <div className="App">
         <Route path="/details" component={Details} />
         <Route path="/" exact component={Home} />
+        <Route path="/edit" component={Edit} />
         </div>
         </Router>
     );

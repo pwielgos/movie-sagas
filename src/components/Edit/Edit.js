@@ -1,21 +1,27 @@
-// import React, { Component } from 'react';
-// import { withRouter } from 'react-router-dom';
-// import { connect } from 'react-redux';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-// class Edit extends Component {
-//     takeToDetails = ()=>{
-//         this.props.history.push('/details')
-//     }
+class Edit extends Component {
+    takeToDetails = ()=>{
+        this.props.history.push('/details')
+    }
 
-//   render() {
-//     return (
-//       <div>
-//           <h1>Edit Page</h1>
-//           <button onClick={this.takeToDetails}>Cancel</button>
-//           <button onClick={this.takeToDetails}>Save</button>
-//       </div>
-//     );
-//   }
-// }
+  render() {
+    return (
+      <div>
+          <h1>Edit Page</h1>
+          <input></input>
+          <input></input>
+          <button onClick={this.takeToDetails}>Cancel</button>
+          <button onClick={this.takeToDetails}>Save</button>
+      </div>
+    );
+  }
+}
 
-// export default withRouter(Edit);
+const mapStateToProps = reduxState => {
+    return {
+        reduxState: reduxState
+    }
+}
+export default connect(mapStateToProps)(Edit);
